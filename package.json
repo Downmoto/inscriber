@@ -2,7 +2,7 @@
   "name": "inscriber",
   "productName": "inscriber",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "pest",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
@@ -51,19 +51,11 @@
               "config": "./webpack.renderer.config.js",
               "entryPoints": [
                 {
-                  "html": "./src/windows/main/index.html",
-                  "js": "./src/windows/main/renderer.js",
+                  "html": "./src/renderer/index.html",
+                  "js": "./src/renderer/renderer.js",
                   "name": "main_window",
                   "preload": {
-                    "js": "./src/windows/main/preload.js"
-                  }
-                },
-                {
-                  "html": "./src/windows/entry/index.html",
-                  "js": "./src/windows/entry/renderer.js",
-                  "name": "entry_window",
-                  "preload": {
-                    "js": "./src/windows/entry/preload.js"
+                    "js": "./src/renderer/preload.js"
                   }
                 }
               ]
@@ -87,11 +79,18 @@
     "css-loader": "^6.7.1",
     "electron": "20.1.0",
     "node-loader": "^2.0.0",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
+    "is-hotkey": "^0.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "slate": "^0.82.1",
+    "slate-react": "^0.83.0",
+    "uuid": "^9.0.0"
   }
 }
