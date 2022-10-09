@@ -21,7 +21,7 @@ const createWindow = (w, h) => {
     width: Math.floor(w / 1.7),
     height: Math.floor(h / 1),
     show: false,
-    backgroundColor: "#6C6D73",
+    backgroundColor: "#1C1C1C",
     webPreferences: {
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
     },

@@ -1,14 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import { createRoot } from "react-dom/client";
-import { v4 as uuidv4 } from "uuid";
+
+import FileExplorer from "./components/file-explorer";
+import Header from "./components/header";
+import Inspector from "./components/inspector";
 import Page from "./components/page";
 
-import './styles/app.sass'
-
+import "./styles/app.sass";
 
 function App() {
-  const [pages, setPages] = useState([<Page initialPage key={uuidv4()}/>])
-  return <>{pages}</>;
+  return (
+    <>
+      <Header />
+      <div className="body">
+        <FileExplorer />
+        <div className="main">
+          <Page />
+        </div>
+        <Inspector />
+      </div>
+    </>
+  );
 }
 
 const root = createRoot(document.getElementById("root"));

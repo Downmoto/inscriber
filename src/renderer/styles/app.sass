@@ -1,2 +1,48 @@
 ::-webkit-scrollbar 
-    display: none
+    width: 10px
+
+/* Track */
+::-webkit-scrollbar-track
+  background: #f1f1f1
+ 
+/* Handle */
+::-webkit-scrollbar-thumb
+  background: #888
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+  background: #555
+
+body, html
+    margin: 0
+    height: 100vh
+    max-height: 100vh
+
+#root
+    height: 100%
+
+.body
+    position: absolute
+    top: 100px
+    right: 0
+    bottom: 0
+    left: 0
+
+    display: flex
+
+.main
+    flex: 1
+    display: flex
+    overflow: auto
+    height: 100%
+    justify-content: center
+
+@media screen and (max-width:  1250px )
+    .inspector
+        display: none
+
+    .page
+        max-width: 100%
+
+    .body
+        gap: 0
